@@ -1,0 +1,27 @@
+# 🌐 Force primary code languages
+*.py linguist-language=Python
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+*.ts linguist-language=JavaScript
+*.tsx linguist-language=JavaScript
+
+# 🧪 Exclude Django migrations (auto-generated code)
+**/migrations/** linguist-vendored
+
+# 🎨 Treat static front-end files as documentation
+frontend/src/**/*.css linguist-documentation
+frontend/src/**/*.scss linguist-documentation
+frontend/src/**/*.html linguist-documentation
+frontend/public/** linguist-documentation
+
+# 🖼️ Exclude images, icons, and other binaries
+*.png linguist-generated
+*.jpg linguist-generated
+*.jpeg linguist-generated
+*.gif linguist-generated
+*.svg linguist-generated
+*.ico linguist-generated
+
+# 🚫 Ignore config and build directories/output
+**/build/** linguist-generated
+**/.env linguist-generated
