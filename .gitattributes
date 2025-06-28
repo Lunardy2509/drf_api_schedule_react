@@ -5,16 +5,20 @@
 *.ts linguist-language=JavaScript
 *.tsx linguist-language=JavaScript
 
-# 🧪 Exclude Django migrations (auto-generated code)
+# 🧪 Exclude Django migrations
 **/migrations/** linguist-vendored
 
-# 🎨 Treat static front-end files as documentation
+# 🎨 Treat front-end static files and templates as documentation
+*.html linguist-documentation
+*.css linguist-documentation
+*.scss linguist-documentation
+frontend/public/** linguist-documentation
 frontend/src/**/*.css linguist-documentation
 frontend/src/**/*.scss linguist-documentation
 frontend/src/**/*.html linguist-documentation
-frontend/public/** linguist-documentation
+templates/** linguist-documentation
 
-# 🖼️ Exclude images, icons, and other binaries
+# 🖼️ Exclude images and binary assets
 *.png linguist-generated
 *.jpg linguist-generated
 *.jpeg linguist-generated
@@ -22,6 +26,6 @@ frontend/public/** linguist-documentation
 *.svg linguist-generated
 *.ico linguist-generated
 
-# 🚫 Ignore config and build directories/output
+# 🚫 Ignore output/config/other noise
 **/build/** linguist-generated
 **/.env linguist-generated
